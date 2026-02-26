@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>My Borrowed Books</h2>
+
+{% for borrow in borrows %}
+<div class="card mb-3 p-3">
+    <h5>{{ borrow.book.title }}</h5>
+    <p>Borrow Date: {{ borrow.borrow_date }}</p>
+    <p>Expected Return: {{ borrow.expected_return }}</p>
+
+    <a href="{% url 'return_book' borrow.id %}" class="btn btn-danger btn-sm">
+        Return Book
+    </a>
+</div>
+{% empty %}
+<p>You have no borrowed books.</p>
+{% endfor %}
+
+{% endblock %}

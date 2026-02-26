@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>All Categories</h2>
+
+<div class="row">
+    {% for category in categories %}
+    <div class="col-md-4 mb-3">
+        <div class="card p-3 text-center">
+            <h5>{{ category.name }}</h5>
+            <a href="{% url 'category_books' category.id %}" class="btn btn-dark btn-sm">
+                View Books
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
