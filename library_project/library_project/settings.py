@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-6czmcd$h&*6v^xdyjh33as%j*e7vt^37p5^fvgh_c7fej+5lu9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['electronic-libraryoo-1.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -130,4 +129,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 MEDIA_URL = '/media/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
